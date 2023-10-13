@@ -1,14 +1,16 @@
-class Solution {
-public:
-    int reverse(int x) {
-        long r=0;
-        while(x){
-            int lastdigit=x%10;
-            r=(r*10)+lastdigit;
-            x=x/10;
-        }
-        if(r>INT_MAX || r<INT_MIN) 
-        return 0;
-        return int(r);
-    }
-};
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int n, reverse=0, rem;    
+cout<<"Enter a number: ";    
+cin>>n;    
+  while(n!=0)    
+  {    
+     rem=n%10;      
+     reverse=reverse*10+rem;    
+     n/=10;    
+  }    
+ cout<<"Reversed Number: "<<reverse<<endl;     
+return 0;  
+}  
